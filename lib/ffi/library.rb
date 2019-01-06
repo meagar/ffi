@@ -109,6 +109,7 @@ module FFI
           libnames.each do |libname|
             begin
               orig = libname
+              puts "ffi: #{libname}"
               lib = FFI::DynamicLibrary.open(libname, lib_flags)
               break if lib
 
